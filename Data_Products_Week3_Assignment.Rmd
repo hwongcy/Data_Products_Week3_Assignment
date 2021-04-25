@@ -12,17 +12,17 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Introduction
 
-This is an introduction
+The objective of this assignment is used to create a plot with **Plotly** in R Markdown. The plot will demonstrate the relationship of the Horse Power (**hp**) and Miles Per Gallon (**mpg**) of the dataset **mtcars**.
 
 ## Build Charts with Plotly
 
-- Load Ploty Library:
+- Load **Plotly** Library:
 
 ```{r load_lib, echo=TRUE, warning=FALSE, error=FALSE, message=FALSE}
 library(plotly)
 ```
 
-- Load **mtcars** Data:
+- Load **mtcars** Dataset:
 
 ```{r load_data, echo=TRUE, warning=FALSE, error=FALSE, message=FALSE}
 data("mtcars")
@@ -30,7 +30,7 @@ data("mtcars")
 
 ## Build Charts with Plotly, Continued
 
-- Build the Chart with Plotly as shown below:
+- Build the Chart with **Plotly** as shown below:
 
 ```{r show_command, eval=FALSE, echo=TRUE}
 xlab <- list(title = "Horse Power")
@@ -47,8 +47,6 @@ fig
 ```
 
 ## Build Charts with Plotly, Continued
-
-- Result:
 
 ```{r build_chart, echo=FALSE, warning=FALSE, error=FALSE}
 xlab <- list(title = "Horse Power")
