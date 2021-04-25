@@ -1,0 +1,59 @@
+---
+title: "Data Products Week 3 Assignment"
+author: "Henry CY Wong"
+date: "2021-04-25"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## Introduction
+
+This is an introduction
+
+## Build Charts with Plotly
+
+- Load Ploty Library:
+
+```{r load_lib, echo=TRUE, warning=FALSE, error=FALSE, message=FALSE}
+library(plotly)
+```
+
+- Load **mtcars** Data:
+
+```{r load_data, echo=TRUE, warning=FALSE, error=FALSE, message=FALSE}
+data("mtcars")
+```
+
+## Build Charts with Plotly, Continued
+
+- Build the Chart with Plotly as shown below:
+
+```{r show_command, eval=FALSE, echo=TRUE}
+xlab <- list(title = "Horse Power")
+ylab <- list(title = "Miles per Gallon")
+fig <-plot_ly(mtcars, 
+              x = mtcars$mpg, 
+              y = mtcars$hp, 
+              color = factor(mtcars$cyl), 
+              size = mtcars$wt, 
+              mode = "markers", 
+              type = "scatter")
+fig <- fig %>% layout(xaxis = xlab, yaxis = ylab)
+fig
+```
+
+## Build Charts with Plotly, Continued
+
+- Result:
+
+```{r build_chart, echo=FALSE, warning=FALSE, error=FALSE}
+xlab <- list(title = "Horse Power")
+ylab <- list(title = "Miles per Gallon")
+fig <- plot_ly(mtcars, x = mtcars$mpg, y = mtcars$hp, color = factor(mtcars$cyl), size = mtcars$wt, mode = "markers", type = "scatter")
+fig <- fig %>% layout(xaxis = xlab, yaxis = ylab)
+fig
+```
